@@ -33,7 +33,6 @@ namespace WpfApp1
             timer.Tick += Timer_Tick;
             timer.Start();
             SetupGame();
-
         }
 
         private void Timer_Tick(object sender, EventArgs e)
@@ -43,7 +42,7 @@ namespace WpfApp1
 
         private void SetupGame()
         {
-            List<string> lists = new List<string>()
+            List<string> animalEmoji = new List<string>()
             {
                 "❤","❤",
                 "🌹","🌹",
@@ -56,7 +55,6 @@ namespace WpfApp1
                 "🐾","🐾",
                 "🐢","🐢"
             };
-            List<string> animalEmoji = lists;
 
             Random random = new Random();
 
@@ -91,7 +89,8 @@ namespace WpfApp1
                     {
                         timer.Stop();
                     }
-                } else
+                }
+                else
                 {
                     lastSelectedTextBlock.Opacity = 1;
                 }
